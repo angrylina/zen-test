@@ -6,11 +6,13 @@
       <input pattern="$Text">
         <var name="UserName" value="$Text" scope="user"/>
         <output value="Приятно познакомиться, $UserName! Я могу помочь тебе вызвать такси. В каком городе ты сейчас находишься?"/>
+		<context>
 		 <input pattern="* $City *">
 			<output value="Спасибо! Где ты будешь ждать машину? Мне нужен точный адрес."/>
 		 </input>
+		</context>
+	  </input>
 	</context>
-      </input>
   </input>
 </context>
 
