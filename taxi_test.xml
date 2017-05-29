@@ -10,6 +10,9 @@
         <output value="Приятно познакомиться, $UserName! Хочешь вызвать такси?"/>
         <context/>
       </input>
+		<input id="yn" pattern="(да|нет) *">
+			<output value="Хорошо! В каком ты сейчас городе?" if input="да*"/>
+		
     </context>
   </input>
 </context>
