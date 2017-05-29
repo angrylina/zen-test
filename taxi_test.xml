@@ -11,7 +11,12 @@
         <context/>
       </input>
 		<input id="yn" pattern="(да|нет) *">
-			<output value="Хорошо! В каком ты сейчас городе?" if input="да*"/>
+		<if input="да">
+			<output value="Хорошо! В каком ты сейчас городе?"/>
+		<else>
+			<output value="Жаль. Буду рад помочь в другой раз."/>
+		</else>
+		</if>	
 		
     </context>
   </input>
