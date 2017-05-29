@@ -1,24 +1,16 @@
 <context>
   <input id="greeting" pattern="(привет|здравствуй|добрый день|добрый вечер) *">
     <output value="Привет, $UserName! Хочешь вызвать такси?" if="full($UserName)"/>
-
     <context id="name_is_empty" if="empty($UserName)">
       <output value="Привет! Как тебя зовут?"/>
       <input pattern="$Text">
         <var name="UserName" value="$Text" scope="user"/>
         <output value="Приятно познакомиться, $UserName! Я могу помочь тебе вызвать такси. В каком городе ты сейчас находишься?"/>
-		<context>
-		 <sample>
-		  <item>Москва</item>
-		  <item>Санкт-Петербург</item>
-		  <item>Екатеринбург</item>
-		 </sample>
 		 <input pattern="* $City *">
 			<output value="Спасибо! Где ты будешь ждать машину? Мне нужен точный адрес."/>
 		 </input>
-		</context>
+	</context>
       </input>
-    </context>
   </input>
 </context>
 
