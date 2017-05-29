@@ -1,0 +1,16 @@
+<context>
+  <input id="greeting" pattern="(привет|здравствуй|добрый день|добрый вечер) *">
+    <output value="Привет, $UserName! Хочешь вызвать такси?" if="full($UserName)"/>
+
+    <context id="name_is_empty" if="empty($UserName)">
+      <output value="Привет! Как тебя зовут?"/>
+
+      <input pattern="$Text">
+        <var name="UserName" value="$Text" scope="user"/>
+        <output value="Приятно познакомиться, $UserName! Хочешь вызвать такси?"/>
+        <context/>
+      </input>
+    </context>
+  </input>
+</context>
+
