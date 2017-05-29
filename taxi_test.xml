@@ -7,7 +7,7 @@
         <var name="UserName" value="$Text" scope="user"/>
         <output value="Приятно познакомиться, $UserName! Я могу помочь тебе вызвать такси. В каком городе ты сейчас находишься?"/>
 		<context>
-		 <input pattern="$Text">
+		 <input pattern="(Москва|Санкт-Петербург|Питер|В Москве|В Питере)">
 			<output value="Спасибо! Где ты будешь ждать машину? Мне нужен точный адрес."/>
 		 </input>
 		</context>
